@@ -1,3 +1,16 @@
 ﻿@page "/"
 
 
+   
+
+<AuthorizeView>
+    <Authorized>
+
+           @foreach (var item in context.User.Claims)
+            {
+                <p>@item</p>
+            } 
+
+    </Authorized>
+
+    </AuthorizeView>
