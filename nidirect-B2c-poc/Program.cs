@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace nidirect_B2c_poc
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
