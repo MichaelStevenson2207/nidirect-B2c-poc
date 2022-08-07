@@ -1,16 +1,39 @@
 ﻿@page "/"
 
 
-   
+   <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Azure B2C demo</h1>
+
+        <h2 class="govuk-heading-m">Technologies used</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Dotnet core 5.0</li>
+            <li>Blazor server application</li>
+            <li>Azure AD B2C</li>
+            <li>Azure key vault</li>
+        </ul>
+
+        
+        <h2 class="govuk-heading-m">What problem does this solve?</h2>
+
+        <p class="govuk-body">
+            This solves the problem of setting up identity quickly by using Azure B2C. Instead of having to code up identity yourself in your app, you can use B2C to register your app for identity by creating a tenant in Azure to quikcly create and authenticate users. 
+            It uses user flows and handles all the usual stuff such as passwords, registering users etc so you dont have to.
+        </p>
+
+        
 
 <AuthorizeView>
     <Authorized>
 
            @foreach (var item in context.User.Claims)
             {
-                <p>@item</p>
+                <p>@item.Type - @item.Value</p>
             } 
 
     </Authorized>
 
     </AuthorizeView>
+
+    </div>
